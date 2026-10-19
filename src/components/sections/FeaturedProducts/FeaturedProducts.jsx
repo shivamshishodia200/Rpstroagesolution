@@ -118,10 +118,11 @@ export const FeaturedProducts = ({
   }, [products, city, pageType]);
 
   const categories = [
-    { id: 'all', label: 'All Engineered Systems' },
+    { id: 'all', label: 'All Products' },
     { id: 'supermarket-racks', label: 'Supermarket Racks' },
+    { id: 'retail-display-racks', label: 'Retail Display Racks' },
     { id: 'warehouse-racking', label: 'Warehouse Racks' },
-    { id: 'shopping-trolleys', label: 'Shopping Trolleys' },
+    { id: 'shopping-trolleys', label: 'Shopping Trolleys & Baskets' },
     { id: 'industrial-storage', label: 'Industrial & Cabinets' },
     { id: 'checkout-counters', label: 'Checkout Counters' },
   ];
@@ -227,18 +228,21 @@ export const FeaturedProducts = ({
               >
                 <div>
                   {/* Image Box */}
-                  <Link to={productHref} className="block relative aspect-[4/3] rounded-xl bg-gradient-to-b from-neutral-50 to-neutral-100/70 overflow-hidden mb-4 border border-neutral-100 flex items-center justify-center p-4">
+                  <Link to={productHref} className="block relative aspect-[4/3] rounded-xl bg-neutral-100 overflow-hidden mb-4 border border-neutral-200/80 shadow-2xs">
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-full object-contain mix-blend-multiply group-hover:scale-108 transition-transform duration-500"
+                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
                       loading="lazy"
+                      onError={(e) => {
+                        e.target.src = '/images/gondola-display-rack-real.jpeg';
+                      }}
                     />
-                    <div className="absolute top-2.5 left-2.5 bg-white/95 backdrop-blur-xs px-2.5 py-0.5 rounded-full text-[10px] font-bold text-neutral-800 uppercase tracking-wider border border-neutral-200 shadow-2xs">
+                    <div className="absolute top-2.5 left-2.5 bg-white/95 backdrop-blur-xs px-2.5 py-0.5 rounded-full text-[10px] font-bold text-neutral-800 uppercase tracking-wider border border-neutral-200 shadow-2xs z-10">
                       {product.category}
                     </div>
                     {product.hasDedicatedSeoPage && (
-                      <div className="absolute top-2.5 right-2.5 bg-brand-orange text-white text-[9px] font-bold px-2 py-0.5 rounded-full shadow-xs uppercase tracking-wider">
+                      <div className="absolute top-2.5 right-2.5 bg-brand-orange text-white text-[9px] font-bold px-2 py-0.5 rounded-full shadow-xs uppercase tracking-wider z-10">
                         Local Edition
                       </div>
                     )}

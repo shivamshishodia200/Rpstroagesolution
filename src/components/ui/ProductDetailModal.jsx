@@ -59,13 +59,16 @@ export const ProductDetailModal = ({ product, isOpen, onClose, onEnquire }) => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 p-6 sm:p-8">
           {/* Left: Image & Badge */}
           <div className="md:col-span-5 flex flex-col">
-            <div className="relative bg-neutral-100 border border-neutral-200 overflow-hidden aspect-square flex items-center justify-center p-4">
+            <div className="relative bg-neutral-100 rounded-xl border border-neutral-200 overflow-hidden aspect-square flex items-center justify-center">
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 hover:scale-105"
+                className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
+                onError={(e) => {
+                  e.target.src = '/images/gondola-display-rack-real.jpeg';
+                }}
               />
-              <div className="absolute top-3 left-3 bg-white/95 px-2.5 py-1 text-[11px] font-bold text-neutral-900 uppercase tracking-widest border border-neutral-200 shadow-sm">
+              <div className="absolute top-3 left-3 bg-white/95 px-2.5 py-1 text-[11px] font-bold text-neutral-900 uppercase tracking-widest border border-neutral-200 shadow-sm z-10">
                 Industrial Grade
               </div>
             </div>

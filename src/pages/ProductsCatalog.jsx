@@ -53,6 +53,7 @@ export const ProductsCatalog = ({ onOpenQuote, onViewDetails }) => {
           } else {
             setCategories([
               { slug: 'supermarket-racks', name: 'Supermarket Racks' },
+              { slug: 'retail-display-racks', name: 'Retail Display Racks' },
               { slug: 'warehouse-racking', name: 'Warehouse Racks' },
               { slug: 'shopping-trolleys', name: 'Shopping Trolleys' },
               { slug: 'industrial-storage', name: 'Industrial Storage' },
@@ -214,16 +215,16 @@ export const ProductsCatalog = ({ onOpenQuote, onViewDetails }) => {
                     >
                       <div>
                         {/* Image */}
-                        <div className="relative aspect-[4/3] rounded-xl bg-gradient-to-b from-neutral-50 to-neutral-100/70 overflow-hidden mb-4 border border-neutral-100 flex items-center justify-center p-4">
+                        <div className="relative aspect-[4/3] rounded-xl bg-neutral-100 overflow-hidden mb-4 border border-neutral-200/80 shadow-2xs">
                           <img
                             src={imageUrl}
                             alt={product.images?.[0]?.alt || product.name}
-                            className="w-full h-full object-contain mix-blend-multiply group-hover:scale-108 transition-transform duration-500"
+                            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
                             onError={(e) => {
                               e.target.src = '/images/gondola-display-rack-real.jpeg';
                             }}
                           />
-                          <div className="absolute top-2.5 left-2.5 bg-white/95 backdrop-blur-xs px-2.5 py-0.5 rounded-full text-[10px] font-bold text-neutral-800 uppercase tracking-wider border border-neutral-200 shadow-2xs">
+                          <div className="absolute top-2.5 left-2.5 bg-white/95 backdrop-blur-xs px-2.5 py-0.5 rounded-full text-[10px] font-bold text-neutral-800 uppercase tracking-wider border border-neutral-200/90 shadow-2xs z-10">
                             {product.categoryTitle || product.category}
                           </div>
                         </div>

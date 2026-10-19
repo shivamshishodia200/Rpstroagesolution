@@ -15,7 +15,7 @@ export const Projects = ({ onOpenQuote }) => {
       title: "High-Bay Pallet Racking Hub",
       category: "Industrial Warehouse",
       location: "Delhi NCR Logistics Hub",
-      image: "/images/banner3.jpeg",
+      image: "/images/warehouse-rack.jpg",
       specs: "Heavy-Duty Uprights, 2,500 kg/level, Seismic Anchoring",
       description: "Custom-configured multi-tier warehouse pallet system engineered for reach-truck forklifts and maximum cubic density."
     },
@@ -24,8 +24,8 @@ export const Projects = ({ onOpenQuote }) => {
       title: "Hypermarket Gondola Aisles",
       category: "Supermarket Retail",
       location: "Modern Retail Chain, North India",
-      image: "/images/banner1.jpeg",
-      specs: "Modular Double-Sided Gondolas with LED Headers",
+      image: "/images/grocery-store-rack.jpg",
+      specs: "Modular Double-Sided Gondolas, Tool-Free Tier Slits",
       description: "Complete retail shelving fitout including wall displays, center gondolas, and promotional end-caps for high customer footfall."
     },
     {
@@ -33,8 +33,8 @@ export const Projects = ({ onOpenQuote }) => {
       title: "Commercial Retail Store Outfitting",
       category: "Departmental Store",
       location: "Commercial Shopping Complex",
-      image: "/images/banner2.jpeg",
-      specs: "Perimeter Racks, Produce Stands & Garment Rails",
+      image: "/images/display-rack.jpg",
+      specs: "Finished Wood Accents, Epoxy Powder-Coated Steel Bays",
       description: "Architectural retail outfitting combining wood-accented displays, hanging racks, and durable powder-coated steel bays."
     },
     {
@@ -42,25 +42,25 @@ export const Projects = ({ onOpenQuote }) => {
       title: "Heavy Sheet Metal Fabrication & Storage",
       category: "Manufacturing Plant",
       location: "Industrial Tooling Hub, Haryana",
-      image: "/images/banner4.jpeg",
-      specs: "Lockable Steel Tooling Cabinets & Slotted Angles",
+      image: "/images/sheet-metal-fabrication.jpg",
+      specs: "CNC Turret Punched, 1.2–3.5mm CRCA, Hot-Dip Galvanized",
       description: "Shopfloor organization system designed for high-capacity tooling, spare parts segregation, and industrial equipment."
     },
     {
       id: "proj-5",
-      title: "Supermarket Trolley Fleet Deployment",
-      category: "Material Handling",
-      location: "Retail Mall Superstore",
-      image: "/images/Trolley.jpg",
-      specs: "Zinc-Plated 150L Shopping Trolleys with PU Swivels",
-      description: "Supply of heavy-duty, nestable shopping cart fleet engineered with corrosion-resistant zinc plating and whisper-quiet wheels."
+      title: "Apparel Showroom Hanging Fixtures",
+      category: "Fashion & Apparel",
+      location: "Premium Retail Mall",
+      image: "/images/garment-display-rack.jpg",
+      specs: "4-Way Center Hangers, Perimeter Wall Rails, Heavy Steel Base",
+      description: "Modular garment display stands and perimeter hanging fixtures designed for apparel showrooms and high-density visual merchandising."
     },
     {
       id: "proj-6",
       title: "Supermarket Cash & Checkout Counters",
       category: "Checkout Solutions",
       location: "Multi-Lane Supermarket",
-      image: "/images/checkout-cash-counter-real.png",
+      image: "/images/checkout-counter.jpg",
       specs: "Hairline Stainless Steel Slide Top, Multi-Slot Locking Cash Drawer",
       description: "High-throughput cashier desks designed with brushed stainless steel tops, durable red metal chassis, and integrated locking cash drawers."
     }
@@ -122,50 +122,60 @@ export const Projects = ({ onOpenQuote }) => {
           {projects.map((proj) => (
             <div
               key={proj.id}
-              className="project-item group flex flex-col justify-between bg-neutral-50 border border-neutral-200 hover:border-brand-orange/60 transition-all duration-300 overflow-hidden hover:shadow-xl"
+              className="project-item group flex flex-col justify-between bg-white border border-neutral-200 hover:border-brand-orange/80 rounded-xl transition-all duration-300 overflow-hidden hover:shadow-xl"
             >
               {/* Image Container with Hover Lightbox trigger */}
               <div 
                 onClick={() => setActiveLightbox(proj)}
-                className="relative aspect-[16/11] bg-neutral-100 overflow-hidden cursor-pointer"
+                className="relative aspect-[4/3] bg-neutral-900 overflow-hidden cursor-pointer"
               >
                 <img
                   src={proj.image}
                   alt={proj.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none" />
                 
                 {/* Location Badge */}
-                <div className="absolute top-3 left-3 bg-white/95 px-2.5 py-1 text-[11px] font-semibold text-neutral-900 flex items-center gap-1.5 border border-neutral-200">
+                <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-2.5 py-1 text-[11px] font-semibold text-neutral-900 flex items-center gap-1.5 rounded-md border border-neutral-200/80 shadow-sm">
                   <MapPin className="w-3.5 h-3.5 text-brand-orange" />
                   <span>{proj.location}</span>
                 </div>
 
+                {/* Status Badge */}
+                <div className="absolute top-3 right-3 bg-black/75 backdrop-blur-md px-2.5 py-1 text-[10px] font-mono font-medium text-emerald-400 rounded-md border border-neutral-700/80 flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  Installed
+                </div>
+
                 {/* Lightbox action icon */}
-                <div className="absolute bottom-3 right-3 w-9 h-9 bg-white/90 text-neutral-900 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-3 right-3 w-8 h-8 rounded-full bg-white/95 text-neutral-900 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-200 shadow-md hover:bg-brand-orange hover:text-white">
                   <Maximize2 className="w-4 h-4" />
                 </div>
               </div>
 
               {/* Caption & Specs */}
-              <div className="p-6 flex flex-col justify-between flex-1">
+              <div className="p-5 sm:p-6 flex flex-col justify-between flex-1">
                 <div>
-                  <span className="text-[10px] font-mono uppercase tracking-widest text-brand-orange block mb-1">
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-brand-orange font-semibold block mb-1.5">
                     {proj.category}
                   </span>
-                  <h3 className="text-lg font-bold font-display text-neutral-900 group-hover:text-brand-orange transition-colors mb-2">
+                  <h3 className="text-lg font-bold font-display text-neutral-900 group-hover:text-brand-orange transition-colors mb-2 leading-snug">
                     {proj.title}
                   </h3>
-                  <p className="text-xs text-brand-textSecondary leading-relaxed mb-4">
+                  <p className="text-xs text-brand-textSecondary leading-relaxed mb-4 line-clamp-2">
                     {proj.description}
                   </p>
                 </div>
 
-                <div className="pt-3 border-t border-neutral-200 text-[11px] text-neutral-600 font-mono">
-                  <span className="text-neutral-400 block mb-0.5">Specifications:</span>
-                  <span className="font-semibold text-neutral-800">{proj.specs}</span>
+                <div className="pt-3 border-t border-neutral-100 mt-auto bg-neutral-50 -mx-5 -mb-5 sm:-mx-6 sm:-mb-6 p-4 rounded-b-xl border-t">
+                  <span className="text-[10px] font-mono text-neutral-400 block uppercase tracking-wider mb-0.5">
+                    Engineered Specs:
+                  </span>
+                  <span className="text-xs font-semibold text-neutral-800 line-clamp-1 block">
+                    {proj.specs}
+                  </span>
                 </div>
               </div>
             </div>

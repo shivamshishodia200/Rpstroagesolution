@@ -53,7 +53,7 @@ export const PRODUCT_COLLECTIONS = [
     title: "Supermarket Racks",
     subtitle: "Modular wall & center gondola shelving systems",
     description: "Heavy-duty modular supermarket shelving with powder-coated finish, multi-tier adjustability, and front price-tag channels.",
-    image: "/images/gondola-display-rack-real.jpeg",
+    image: "/images/gondola-rack.jpg",
     features: ["Modular tier adjustment", "High-grade CRCA steel", "Integrated price channel lips"],
     aspectRatio: "aspect-[4/5]",
     tag: "Flagship Retail"
@@ -64,7 +64,7 @@ export const PRODUCT_COLLECTIONS = [
     title: "Retail Display Racks",
     subtitle: "Showroom garment displays & wire dump bins",
     description: "Modern retail apparel display racks, wall-mounted hanging rails, and promotional wire mesh dump bins for high sales throughput.",
-    image: "/images/garment-display-rack-real.jpeg",
+    image: "/images/display-rack.jpg",
     features: ["Heavy garment hanging capacity", "Perimeter wall rails", "Promotional dump bins"],
     aspectRatio: "aspect-[4/3]",
     tag: "Merchandising"
@@ -75,7 +75,7 @@ export const PRODUCT_COLLECTIONS = [
     title: "Warehouse Racking Systems",
     subtitle: "Heavy-duty pallet racking & multi-tier storage",
     description: "Industrial heavy-duty pallet racks with high-tensile structural uprights, safety locking pins, and beam load capacities up to 3,500 kg.",
-    image: "/images/warehouse-pallet-rack-real.jpeg",
+    image: "/images/heavy-duty-rack.webp",
     features: ["Up to 3,500 kg/level", "High-tensile structural steel", "Seismic safety pin locking"],
     aspectRatio: "aspect-[4/3]",
     tag: "Heavy Industry"
@@ -86,7 +86,7 @@ export const PRODUCT_COLLECTIONS = [
     title: "Industrial Storage Racks",
     subtitle: "Modular slotted angle shelving & corner storage",
     description: "Heavy-gauge slotted angle racks and modular corner shelving units designed for factory storerooms, spare parts inventory, and archives.",
-    image: "/images/slotted-angle-rack-real.png",
+    image: "/images/slotted-angle-rack.jpg",
     features: ["Corner stiffeners for zero sway", "Oven-baked enamel finish", "Custom tier heights"],
     aspectRatio: "aspect-[4/5]",
     tag: "Logistics"
@@ -97,7 +97,7 @@ export const PRODUCT_COLLECTIONS = [
     title: "Shopping Trolleys & Hand Trucks",
     subtitle: "Platform hand trucks & supermarket trolleys",
     description: "Industrial platform trolleys with non-skid structural deck, folding ergonomic handle, and smooth polyurethane swivel caster wheels.",
-    image: "/images/platform-trolley-real.png",
+    image: "/images/shopping-trolley.jpg",
     features: ["Reinforced platform deck", "Foldable steel handle", "Heavy-load PU swivel castors"],
     aspectRatio: "aspect-[4/3]",
     tag: "Material Handling"
@@ -108,7 +108,7 @@ export const PRODUCT_COLLECTIONS = [
     title: "Checkout & Cash Counters",
     subtitle: "Stainless steel billing counters with cash drawers",
     description: "Ergonomic supermarket POS cash counters with hairline stainless steel conveyor top, durable red metal body, and integrated locking cash drawer.",
-    image: "/images/checkout-cash-counter-real.png",
+    image: "/images/checkout-counter.jpg",
     features: ["Hairline brushed SS top", "Integrated locking cash drawer", "Concealed wiring ducts"],
     aspectRatio: "aspect-[4/5]",
     tag: "POS Systems"
@@ -117,129 +117,340 @@ export const PRODUCT_COLLECTIONS = [
 
 export const FEATURED_PRODUCTS = [
   {
-    id: "prod-1",
-    name: "Gondola Display Rack",
-    category: "Supermarket Racks",
-    categoryId: "supermarket-racks",
-    image: "/images/gondola-display-rack-real.jpeg",
-    shortDesc: "Modular white supermarket wall & gondola display shelving with red price-channel lips.",
+    id: "shopping-trolley",
+    slug: "shopping-trolley",
+    name: "Shopping Trolley",
+    category: "Shopping Trolleys",
+    categoryId: "shopping-trolleys",
+    image: "/images/shopping-trolley.jpg",
+    shortDesc: "Commercial grade supermarket shopping cart with electro-zinc rust proof plating and smooth PU casters.",
     specs: {
-      material: "Prime Grade Cold Rolled Steel (CRCA)",
-      loadCapacity: "80 - 150 kg per shelf tier",
-      finish: "Electrostatic Pure Polyester Epoxy Powder Coating",
-      standardHeight: "1500mm / 1800mm / 2100mm",
-      shelfDepth: "300mm to 500mm adjustable",
+      material: "High-Tensile Tubular Steel & Chrome Wire",
+      loadCapacity: "80 kg to 160 kg payload",
+      finish: "Bright Zinc Plating with Rust-Resistant Clear Coat",
+      wheelType: "4x 100mm PU Swivel Castor Wheels",
     },
-    highlights: ["Tool-free tier adjustments", "Dual side product display", "Integrated red price channel holders"]
+    highlights: ["Smooth swivel maneuverability", "Red corner buffer protectors", "Heavy-duty wire basket"]
   },
   {
-    id: "prod-2",
-    name: "Heavy Duty Warehouse Pallet Rack",
-    category: "Warehouse Racking",
+    id: "display-rack",
+    slug: "display-rack",
+    name: "Display Rack",
+    category: "Retail Display Racks",
+    categoryId: "retail-display-racks",
+    image: "/images/display-rack.jpg",
+    shortDesc: "Departmental store grocery & merchandise display racks with wooden accents and multi-tier adjustable shelves.",
+    specs: {
+      material: "Prime Grade CRCA Steel & Finished Wood Panels",
+      loadCapacity: "80 - 140 kg per shelf tier",
+      finish: "Pure Polyester Epoxy Powder Coating",
+      standardHeight: "1500mm / 1800mm / 2100mm",
+    },
+    highlights: ["Tool-free tier adjustments", "Dual side product display", "Wooden accent headers"]
+  },
+  {
+    id: "sheet-metal-fabrication",
+    slug: "sheet-metal-fabrication",
+    name: "Sheet Metal Fabrication",
+    category: "Industrial Storage Racks",
+    categoryId: "industrial-storage",
+    image: "/images/sheet-metal-fabrication.jpg",
+    shortDesc: "Custom precision sheet metal brackets, upright channels, and structural components for industrial storage.",
+    specs: {
+      material: "Heavy Gauge Cold Rolled Steel (IS 2062 / IS 513 CRCA)",
+      loadCapacity: "Heavy Structural Load Rating",
+      finish: "Hot Dip Galvanized / Powder Coated",
+      fabrication: "CNC Turret Punching, Laser Cutting & Hydraulic Bending",
+    },
+    highlights: ["Custom thickness 1.2mm - 3.5mm", "Precision punch tolerances", "Anti-corrosion galvanization"]
+  },
+  {
+    id: "metal-cabinets",
+    slug: "metal-cabinets",
+    name: "Metal Cabinets",
+    category: "Industrial Storage Racks",
+    categoryId: "industrial-storage",
+    image: "/images/metal-cabinets.jpg",
+    shortDesc: "Heavy-duty industrial steel storage cabinets with 3-point locking system and adjustable internal shelving.",
+    specs: {
+      material: "Prime Grade 1.2mm CRCA Steel Body",
+      loadCapacity: "100 kg per shelf tier",
+      finish: "7-Tank Pretreatment Electrostatic Powder Coated",
+      lockType: "3-Point Central Cam Lock with Dual Keys",
+    },
+    highlights: ["Reinforced double doors", "Anti-pry internal hinges", "Oven-baked durable enamel"]
+  },
+  {
+    id: "heavy-duty-rack",
+    slug: "heavy-duty-rack",
+    name: "Heavy Duty Rack",
+    category: "Warehouse Racking Systems",
     categoryId: "warehouse-racking",
-    image: "/images/warehouse-pallet-rack-real.jpeg",
+    image: "/images/heavy-duty-rack.webp",
     shortDesc: "High-bay industrial warehouse pallet racking with blue structural uprights and orange cross beams.",
     specs: {
       material: "High-Tensile Structural Steel",
       loadCapacity: "1,000 kg – 3,500 kg per beam level",
       finish: "Electrostatic Powder Coated Uprights (Blue) & Beams (Orange)",
       standardHeight: "2,000mm up to 8,000mm",
-      beamLengths: "2200mm, 2700mm, 3300mm",
     },
-    highlights: ["Safety locking pins", "Heavy beam connectors", "Custom floor anchor points"]
+    highlights: ["Safety locking pins", "Heavy beam connectors", "Seismic floor anchor points"]
   },
   {
-    id: "prod-3",
-    name: "Slotted Angle Storage Rack",
-    category: "Industrial Storage",
+    id: "retail-display-rack",
+    slug: "retail-display-rack",
+    name: "Retail Display Rack",
+    category: "Retail Display Racks",
+    categoryId: "retail-display-racks",
+    image: "/images/retail-display-rack.png",
+    shortDesc: "Modern black retail display shelving with overhead canopy LED lighting for supermarket beverage aisles.",
+    specs: {
+      material: "Heavy-Gauge Cold Rolled Steel (CRCA)",
+      loadCapacity: "90 - 150 kg per shelf tier",
+      finish: "Matte Black Pure Polyester Powder Coating",
+      lighting: "Integrated Warm White LED Canopy Light Strips",
+    },
+    highlights: ["Overhead illuminated canopy", "High product contrast black finish", "Price ticket channel strips"]
+  },
+  {
+    id: "slotted-angle-rack",
+    slug: "slotted-angle-rack",
+    name: "Slotted Angle Rack",
+    category: "Industrial Storage Racks",
     categoryId: "industrial-storage",
-    image: "/images/slotted-angle-rack-real.png",
+    image: "/images/slotted-angle-rack.jpg",
     shortDesc: "Heavy gauge dark grey slotted angle storage rack with multi-tier corner and wall shelving.",
     specs: {
       material: "Heavy Gauge Slotted Steel Angles & Pressed Shelves",
       loadCapacity: "70 – 120 kg per shelf uniformly distributed",
       finish: "Durable Dark Grey Oven-Baked Enamel Coating",
       standardHeight: "1800mm / 2400mm",
-      levels: "4 to 7 adjustable tiers",
     },
     highlights: ["Corner stiffener plates for zero sway", "Variable shelf pitch", "Easy manual assembly"]
   },
   {
-    id: "prod-4",
-    name: "Supermarket Cash & Checkout Counter",
-    category: "Checkout Counters",
-    categoryId: "checkout-counters",
-    image: "/images/checkout-cash-counter-real.png",
-    shortDesc: "Stainless steel worktop POS checkout desk with red steel body and integrated locking cash drawer.",
-    specs: {
-      material: "Hairline Brushed Stainless Steel Worktop + Heavy Red MS Body",
-      dimensions: "1800mm x 1000mm x 850mm (Customizable)",
-      finish: "Powder Coated Metal with Brushed Stainless Steel Slide Surface",
-      cashDrawer: "Multi-compartment note clips, coin slots with key lock",
-      features: "Integrated POS stand cutout, lockable storage drawer",
-    },
-    highlights: ["Smooth product sliding worktop", "Integrated locking cash drawer", "Concealed wiring ducts"]
-  },
-  {
-    id: "prod-5",
-    name: "Heavy Duty Platform Trolley",
+    id: "shopping-basket",
+    slug: "shopping-basket",
+    name: "Shopping Basket",
     category: "Shopping Trolleys",
     categoryId: "shopping-trolleys",
-    image: "/images/platform-trolley-real.png",
-    shortDesc: "Industrial flatbed platform hand truck with reinforced blue deck and folding ergonomic handle.",
+    image: "/images/shopping-basket.jpg",
+    shortDesc: "Ergonomic plastic shopping hand baskets with reinforced red dual carry handles for retail grocery stores.",
     specs: {
-      material: "Reinforced Structural Polymer Deck & Tubular Steel Handle",
-      loadCapacity: "150 kg to 300 kg payload capacity",
-      finish: "Anti-skid textured blue platform with corrosion-resistant handle",
-      wheelType: "4x Heavy-Duty Swivel Polyurethane Castor Wheels",
-      handle: "Foldable ergonomic handle with foot-release mechanism",
+      material: "100% Virgin High-Density Polypropylene (HDPE)",
+      loadCapacity: "Up to 25 kg payload capacity",
+      finish: "High-Gloss Anti-Scratch Finish (Black & Red)",
+      capacity: "22 Litres / 28 Litres Volume",
     },
-    highlights: ["Folding handle for space-saving storage", "Smooth-rolling 360-degree wheels", "Heavy payload stability"]
+    highlights: ["Dual folding red carry handles", "Ventilated mesh base", "Stackable nesting design"]
   },
   {
-    id: "prod-6",
-    name: "Retail Garment & Apparel Display Rack",
-    category: "Retail Display Racks",
-    categoryId: "retail-display-racks",
-    image: "/images/garment-display-rack-real.jpeg",
-    shortDesc: "Showroom garment hanging fixtures and perimeter wall display shelving for apparel stores.",
+    id: "shopping-cart",
+    slug: "shopping-cart",
+    name: "Shopping Cart",
+    category: "Shopping Trolleys",
+    categoryId: "shopping-trolleys",
+    image: "/images/shopping-cart.jpg",
+    shortDesc: "Standard supermarket wire shopping cart with green bumper protectors, ergonomic push handle, and child seat.",
     specs: {
-      material: "Heavy-Gauge Powder Coated MS & Chrome Hanging Rails",
-      finish: "Pure White & Chrome Modern Architectural Finish",
-      height: "2100mm / 2400mm modular wall fixtures",
-      accessories: "Integrated price signage frames, folded garment shelves, hanging rails",
+      material: "Bright Zinc Plated Steel Wire with Clear Lacquer Coating",
+      loadCapacity: "90 kg - 150 kg payload",
+      finish: "Electro-Galvanized Mirror Chrome Finish",
+      wheels: "4x 100mm Noise-Free PU Castor Wheels",
     },
-    highlights: ["High-density apparel hanging capacity", "Perimeter wall rail mounting", "Integrated price signage displays"]
+    highlights: ["Folding child safety seat", "Green corner bumpers", "Nesting space-saving design"]
   },
   {
-    id: "prod-7",
-    name: "Square Wire Mesh Promotional Dump Bin",
-    category: "Retail Display Racks",
-    categoryId: "retail-display-racks",
-    image: "/images/square-wire-dump-bin-real.png",
-    shortDesc: "Collapsible square chrome wire mesh dump bin with folding stand for retail discount promotions.",
+    id: "industrial-storage-rack",
+    slug: "industrial-storage-rack",
+    name: "Industrial Storage Rack",
+    category: "Industrial Storage Racks",
+    categoryId: "industrial-storage",
+    image: "/images/industrial-storage-rack.jpg",
+    shortDesc: "Multi-tier medium duty industrial storage rack with blue slotted frame and orange shelf supports.",
     specs: {
-      material: "Heavy-Gauge Electro-Plated Chrome Steel Wire",
-      stand: "Folding Tubular Steel Chrome Base Stand",
-      meshGrid: "High-strength welded wire grid with reinforced corners",
-      capacity: "Up to 60 kg distributed promotional merchandise",
+      material: "Prime Steel Cold-Formed Upright Sections",
+      loadCapacity: "300 kg – 800 kg per storage level",
+      finish: "Epoxy Polyester Powder Coating (Blue/Orange)",
+      standardHeight: "1800mm / 2400mm / 3000mm",
     },
-    highlights: ["Collapsible folding stand", "High-visibility impulse display", "Corrosion-resistant bright chrome plating"]
+    highlights: ["Boltless clip-in assembly", "Heavy steel shelf decking", "Custom depth & tier levels"]
   },
   {
-    id: "prod-8",
-    name: "Round Wire Display Basket",
+    id: "warehouse-rack",
+    slug: "warehouse-rack",
+    name: "Warehouse Rack",
+    category: "Warehouse Racking Systems",
+    categoryId: "warehouse-racking",
+    image: "/images/warehouse-rack.jpg",
+    shortDesc: "Heavy industrial warehouse beam racking with white shelf decking panels and blue structural uprights.",
+    specs: {
+      material: "High Yield IS 2062 Structural Steel",
+      loadCapacity: "800 kg – 2,500 kg per beam tier",
+      finish: "Corrosion-Resistant Industrial Powder Coating",
+      decking: "Cold Rolled Steel Deck Panels",
+    },
+    highlights: ["Forklift accessible layout", "Safety beam locks", "Modular extension bays"]
+  },
+  {
+    id: "vegetable-rack-for-shop",
+    slug: "vegetable-rack-for-shop",
+    name: "Vegetable Rack For Shop",
     category: "Retail Display Racks",
     categoryId: "retail-display-racks",
-    image: "/images/round-wire-basket-real.png",
-    shortDesc: "Tapered circular chrome wire mesh impulse display basket on sturdy floor stand.",
+    image: "/images/vegetable-rack-for-shop.jpg",
+    shortDesc: "Multi-tier slanted grocery & produce display rack with wooden front fascia and plastic perforated vegetable crates.",
     specs: {
-      material: "Bright Chrome-Plated Cold Drawn Steel Wire",
-      design: "Tapered round circular dump bin basket",
-      base: "Integrated circular wire floor support base",
-      usage: "Aisle-end and checkout impulse retail merchandising",
+      material: "Heavy MS Tubular Frame with Wooden Border Accents",
+      loadCapacity: "50 kg per crate tier",
+      finish: "Anti-Corrosive Green / Black Powder Coating",
+      design: "Slanted inclined tiers for maximum product visibility",
     },
-    highlights: ["360-degree customer accessibility", "Lightweight yet sturdy steel construction", "Mirror chrome finish"]
+    highlights: ["Inclined crate display angles", "Natural wood front border", "Easy-to-clean hygiene design"]
+  },
+  {
+    id: "plastic-shopping-basket",
+    slug: "plastic-shopping-basket",
+    name: "Plastic Shopping Basket",
+    category: "Shopping Trolleys",
+    categoryId: "shopping-trolleys",
+    image: "/images/plastic-shopping-basket.jpg",
+    shortDesc: "Stackable black supermarket shopping hand basket with red dual swing handles and ventilated grid base.",
+    specs: {
+      material: "Impact-Resistant Virgin Polypropylene (PP)",
+      loadCapacity: "25 kg load bearing",
+      finish: "Scratch-Resistant Textured Surface",
+      volume: "25 Litres Capacity",
+    },
+    highlights: ["Dual ergonomic grip swing handles", "Stackable nesting design", "Smooth rounded corners"]
+  },
+  {
+    id: "garment-display-rack",
+    slug: "garment-display-rack",
+    name: "Garment Display Rack",
+    category: "Retail Display Racks",
+    categoryId: "retail-display-racks",
+    image: "/images/garment-display-rack.jpg",
+    shortDesc: "Retail apparel and clothing display rack with stepped hanging bars and lower shelving tier for folded garments.",
+    specs: {
+      material: "Heavy Gauge Steel with Chrome Hanging Tubes",
+      loadCapacity: "120 kg total hanging load",
+      finish: "Orange Frame with Powder-Coated Shelving & Polished Chrome Rails",
+      usage: "Apparel Boutiques, Garment Showrooms, Fashion Retail",
+    },
+    highlights: ["Multi-level hanging bars", "Integrated shelf for folded stock", "High-visibility retail display"]
+  },
+  {
+    id: "gondola-rack",
+    slug: "gondola-rack",
+    name: "Gondola Rack",
+    category: "Supermarket Racks",
+    categoryId: "supermarket-racks",
+    image: "/images/gondola-rack.jpg",
+    shortDesc: "Two-sided central island supermarket gondola display shelving with purple/red price channel edging.",
+    specs: {
+      material: "Prime Grade Cold Rolled Steel (CRCA)",
+      loadCapacity: "80 - 150 kg per shelf tier",
+      finish: "Electrostatic Pure Polyester Epoxy Powder Coating",
+      standardHeight: "1500mm / 1800mm / 2100mm",
+    },
+    highlights: ["Tool-free tier adjustments", "Dual side product display", "Integrated price channel holders"]
+  },
+  {
+    id: "cash-desk-counter",
+    slug: "cash-desk-counter",
+    name: "Cash Desk Counter",
+    category: "Checkout Counters",
+    categoryId: "checkout-counters",
+    image: "/images/cash-desk-counter.jpg",
+    shortDesc: "Commercial POS retail checkout cash desk with stainless steel conveyor top, red steel front, and computer console.",
+    specs: {
+      material: "Hairline Brushed Stainless Steel Worktop & CRCA Body",
+      dimensions: "1800mm x 1000mm x 850mm",
+      finish: "Glossy Red & Off-White Powder Coating",
+      features: "Keyboard tray, locking cash drawer, and barcode scanner recess",
+    },
+    highlights: ["Ergonomic cashier legroom", "Heavy steel locking drawer", "Smooth sliding stainless worktop"]
+  },
+  {
+    id: "checkout-counter",
+    slug: "checkout-counter",
+    name: "Checkout Counter",
+    category: "Checkout Counters",
+    categoryId: "checkout-counters",
+    image: "/images/checkout-counter.jpg",
+    shortDesc: "Heavy-duty orange supermarket checkout counter with stainless steel slide top and locking cash drawer cabinet.",
+    specs: {
+      material: "Hairline Brushed Stainless Steel Top + Heavy MS Base",
+      dimensions: "1800mm x 1000mm x 850mm (Customizable)",
+      finish: "Safety Orange Oven-Baked Powder Coating",
+      cashDrawer: "Multi-compartment note clips, coin slots with key lock",
+    },
+    highlights: ["Smooth product gliding worktop", "Integrated locking cash drawer", "Concealed wiring ducts"]
+  },
+  {
+    id: "plastic-trolley",
+    slug: "plastic-trolley",
+    name: "Plastic Trolley",
+    category: "Shopping Trolleys",
+    categoryId: "shopping-trolleys",
+    image: "/images/plastic-trolley.jpg",
+    shortDesc: "Modern vertical plastic supermarket basket trolley with yellow rim accent and 4 smooth rolling swivel casters.",
+    specs: {
+      material: "High-Impact Polypropylene (PP) Basket on Metal Base",
+      loadCapacity: "40 kg payload",
+      finish: "Dark Grey Body with Bright Yellow Top Rim",
+      wheels: "4x 75mm Heavy-Duty Swivel Rubber Casters",
+    },
+    highlights: ["Deep 65L vertical basket", "Ultra-lightweight steering", "Space-efficient shopping format"]
+  },
+  {
+    id: "supermarket-display-rack",
+    slug: "supermarket-display-rack",
+    name: "Supermarket Display Rack",
+    category: "Supermarket Racks",
+    categoryId: "supermarket-racks",
+    image: "/images/supermarket-display-rack.jpg",
+    shortDesc: "Wall-mounted supermarket retail merchandise shelving unit with red front lips and multi-tier adjustable shelves.",
+    specs: {
+      material: "Prime CRCA Steel Panel & Slotted Uprights",
+      loadCapacity: "80 - 120 kg per tier",
+      finish: "Polyester Epoxy Powder Coating with Red Price Channels",
+      standardHeight: "1800mm / 2100mm / 2400mm",
+    },
+    highlights: ["Adjustable shelf levels", "High-density merchandising", "Red price tag channels"]
+  },
+  {
+    id: "grocery-store-rack",
+    slug: "grocery-store-rack",
+    name: "Grocery Store Rack",
+    category: "Supermarket Racks",
+    categoryId: "supermarket-racks",
+    image: "/images/grocery-store-rack.jpg",
+    shortDesc: "Multi-tier curved white supermarket food and grocery store display shelving with high product visibility.",
+    specs: {
+      material: "High-Grade CRCA Steel with Top Canopy Cover",
+      loadCapacity: "100 - 150 kg per shelf level",
+      finish: "Pure White Anti-Bacterial Powder Coating",
+      shelves: "5 to 6 modular adjustable display shelves",
+    },
+    highlights: ["Curved modern aesthetic", "Heavy load bearing capacity", "Integrated top lighting canopy"]
+  },
+  {
+    id: "hand-basket",
+    slug: "hand-basket",
+    name: "Hand Basket",
+    category: "Shopping Trolleys",
+    categoryId: "shopping-trolleys",
+    image: "/images/Hand-Basket.jpg",
+    shortDesc: "Durable plastic hand shopping baskets in black and grey with dual ergonomic folding handles.",
+    specs: {
+      material: "Reinforced Polypropylene (PP)",
+      loadCapacity: "22 kg payload capacity",
+      finish: "Matte Texture (Black / Grey)",
+      capacity: "22 Litres Volume",
+    },
+    highlights: ["Dual black folding handles", "Perforated easy-to-clean grid base", "Compact nesting stackability"]
   }
 ];
 
@@ -249,34 +460,81 @@ export const INDUSTRY_SOLUTIONS = [
     title: "Supermarkets & Hypermarkets",
     subtitle: "High-Volume Consumer Footfall",
     description: "Comprehensive store fitouts from central gondola runs to produce racks, shopping carts, and high-speed checkout counters.",
-    image: "/images/banner1.jpeg",
-    deliverables: ["Modular Gondolas", "Produce Displays", "Checkout Desks", "Shopping Baskets"]
+    image: "/images/grocery-store-rack.jpg",
+    gallery: [
+      { url: "/images/grocery-store-rack.jpg", title: "Grocery & Gondola Shelving", tag: "Primary System" },
+      { url: "/images/display-rack.jpg", title: "Departmental Store Display", tag: "Accent Shelving" },
+      { url: "/images/shopping-trolley.jpg", title: "Commercial Shopping Trolleys", tag: "Store Transit" },
+      { url: "/images/checkout-counter.jpg", title: "Heavy-Duty Cash Counters", tag: "Billing Desk" }
+    ],
+    deliverables: ["Modular Gondolas", "Produce Displays", "Checkout Desks", "Shopping Baskets"],
+    specs: [
+      { label: "Tier Payload", value: "80 – 140 kg / level" },
+      { label: "Finish", value: "Epoxy Powder Coated" },
+      { label: "Steel Grade", value: "Prime IS 513 CRCA" }
+    ],
+    installedStat: "450+ Supermarkets Fitted"
   },
   {
     id: "warehousing",
     title: "Warehouses & Logistics Parks",
     subtitle: "Heavy-Duty Pallet Infrastructure",
     description: "High-bay pallet racks, drive-in systems, and multi-tier mezzanines designed to maximize cubic storage volume.",
-    image: "/images/banner3.jpeg",
-    deliverables: ["Heavy Pallet Racking", "Cantilever Racks", "Mezzanine Floors", "Heavy Angles"]
+    image: "/images/warehouse-rack.jpg",
+    gallery: [
+      { url: "/images/warehouse-rack.jpg", title: "Heavy Pallet Beam Racks", tag: "Primary System" },
+      { url: "/images/heavy-duty-rack.webp", title: "High-Bay Logistics Racking", tag: "High Load" },
+      { url: "/images/slotted-angle-rack.jpg", title: "Industrial Slotted Angle Shelving", tag: "Shopfloor" },
+      { url: "/images/industrial-storage-rack.jpg", title: "Multi-Tier Storage Infrastructure", tag: "High-Density" }
+    ],
+    deliverables: ["Heavy Pallet Racking", "Cantilever Racks", "Mezzanine Floors", "Heavy Angles"],
+    specs: [
+      { label: "Beam Capacity", value: "Up to 3,500 kg / level" },
+      { label: "Frame Heights", value: "Up to 8,000 mm" },
+      { label: "Safety Standard", value: "Seismic Anchored IS 2062" }
+    ],
+    installedStat: "1,200+ Warehouses Installed"
   },
   {
     id: "fashion",
     title: "Department Stores & Apparel",
     subtitle: "Curated Visual Merchandising",
     description: "Minimalist garment display units, four-way hangers, perimeter wall fixtures, and display pedestals.",
-    image: "/images/banner2.jpeg",
-    deliverables: ["Garment Hanging Racks", "Perimeter Wall Rails", "Display Island Racks", "Accessory Stands"]
+    image: "/images/garment-display-rack.jpg",
+    gallery: [
+      { url: "/images/garment-display-rack.jpg", title: "Garment Display Center Unit", tag: "Primary System" },
+      { url: "/images/retail-display-rack.png", title: "Apparel Perimeter & Island Rails", tag: "Merchandising" },
+      { url: "/images/display-rack.jpg", title: "Multi-Tier Footwear & Accessories", tag: "Shelving" }
+    ],
+    deliverables: ["Garment Hanging Racks", "Perimeter Wall Rails", "Display Island Racks", "Accessory Stands"],
+    specs: [
+      { label: "Finish", value: "Matte Black & Chrome" },
+      { label: "Layout", value: "Modular Floor & Wall Systems" },
+      { label: "Capacity", value: "High-Density Apparel" }
+    ],
+    installedStat: "600+ Retail Showrooms"
   },
   {
     id: "industrial",
     title: "Manufacturing & Industrial Facilities",
     subtitle: "Shopfloor & Tooling Storage",
     description: "Engineered sheet-metal cabinets, slotted angles, and heavy-payload raw material racks built to withstand rigorous industrial conditions.",
-    image: "/images/banner4.jpeg",
-    deliverables: ["Metal Tool Cabinets", "Slotted Angle Systems", "Raw Material Racks", "Fabricated Enclosures"]
+    image: "/images/sheet-metal-fabrication.jpg",
+    gallery: [
+      { url: "/images/sheet-metal-fabrication.jpg", title: "Precision Sheet Metal Fabrication", tag: "Primary System" },
+      { url: "/images/metal-cabinets.jpg", title: "Industrial Steel Tool Cabinets", tag: "Secure Storage" },
+      { url: "/images/slotted-angle-rack.jpg", title: "Heavy Slotted Angle Tool Racks", tag: "Shopfloor" }
+    ],
+    deliverables: ["Metal Tool Cabinets", "Slotted Angle Systems", "Raw Material Racks", "Fabricated Enclosures"],
+    specs: [
+      { label: "Sheet Gauge", value: "1.2mm – 3.5mm CRCA" },
+      { label: "Lock Mechanism", value: "3-Point Central Deadlock" },
+      { label: "Surface Prep", value: "7-Tank Pretreatment" }
+    ],
+    installedStat: "850+ Industrial Facilities"
   }
 ];
+
 
 export const WHY_CHOOSE_US = [
   {
